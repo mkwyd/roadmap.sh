@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown</title>
+    <style>
+        *{
+        text-align: center;
+        }
+        select{
+            border: 1px black solid;
+            border-radius: 5px;
+            padding: 0px 5px 0px 5px;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        function Info(){
+            let jezyk = document.getElementById("lan").value;
+            let HTML = "It uses a system of tags to define elements like headings, paragraphs, images, and links, which a web browser then interprets to display content. While HTML provides the structure, it is often used with Cascading Style Sheets (CSS) for visual styling and JavaScript for interactivity. ";
+            let CSS = "Css is a stylesheet language used to describe the presentation of a document written in HTML or XML";
+            let JavaScript = "JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.";
+            let PHP = "PHP (short for Hypertext PreProcessor) is the most widely used open source and server-side scripting language. It is used to build the web apps of many tech giants like Facebook and to construct many CMS (Content Management systems) like WordPress, Drupal, Shopify, and WooCommerce.";
+            let C = "The C is a programming Language, developed by Dennis Ritchie for creating system applications that directly interact with the hardware devices such as drivers, kernels, etc. • C programming is considered as the base for other programming languages, that is why it is known as mother language. ";
+            let Python = "Python is a popular, high-level, object-oriented programming language that is known for being easy to learn and read.";
+            if(jezyk == "HTML"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + HTML;
+            }else if(jezyk == "CSS"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + CSS;
+            }else if(jezyk == "JavaScript"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + JavaScript;
+            }else if(jezyk == "PHP"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + PHP;
+            }else if(jezyk == "C"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + C;
+            }else if(jezyk == "Python"){
+                document.getElementById("info").innerHTML = "Here is some info about " + jezyk + "<br><br>" + Python;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Custom Dropdown</h1>
+    </header>
+    <main>
+        <label>Chose programming language:</label>
+        <br>
+        <select name="Chose your favorite language" id="lan">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="PHP">PHP</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+        </select>
+        <br>
+        <input type="button" value="Info" onclick="Info()">
+        <p id="info"></p>
+    </main>
+    <footer>
+        <p>Maks Wydorski</p>
+    </footer>   
+</body>
+</html>
